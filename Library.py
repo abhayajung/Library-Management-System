@@ -69,9 +69,9 @@ def register_user(users_dict):
     print("Registration Successfull")
     return True
 
-# users_dict=load_user()
+users_dict=load_user()
 # print(users_dict)
-# register_user(users_dict)
+register_user(users_dict)
 
 def login_user(users_dict):
     print("\n" \
@@ -86,7 +86,6 @@ def login_user(users_dict):
         print("Invalid Username or Password! ")
         return None
     
-
 # login_user(users_dict)
     
 
@@ -141,22 +140,22 @@ def add_book(books_list, book_ids):
 
 books_list = load_books()
 book_ids = get_existing_books_id(books_list)
-print(books_list)
-print(book_ids)
-add_book(books_list, book_ids)
+# print(books_list)
+# print(book_ids)
+# add_book(books_list, book_ids)
 
 ### function to view all the books in the library
 def view_books(books_list):
     """Display all the books in the library"""
     print("\n" \
-    "------ ALL BOOK IN LIBRARY -------")
+    "------ ALL BOOKs IN LIBRARY -------")
     if not books_list:
         print("No books found in library")
         return
     for book in books_list:
-        print(f"{book['id']} ! {book['title']} ! {book['author']} ! {book['quantity']}")
+        print(f"{book['id']} | {book['title']} | {book['author']} | {book['quantity']}")
 
-view_books(books_list)
+# view_books(books_list)
     
 
 
