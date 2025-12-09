@@ -164,7 +164,9 @@ def search_books(books_list):
     search_item = input("Enter the title : ").strip().lower()
     found_item = []
     for book in books_list:
-        if search_item in book['title'] or search_item in book['author']:
+        tittle = book['title'].lower()
+        authorr = book['author'].lower()
+        if search_item in tittle or search_item in authorr:
             found_item.append(book)
     if found_item:
         print(f"Found {len(found_item)} books")
